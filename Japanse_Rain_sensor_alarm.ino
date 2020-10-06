@@ -20,7 +20,7 @@ void loop(){
   //===数値をいじるときは以下の数値をいじってください===
   //(1)雨センサーの値がxを超えたら => (rainSensereading >< x)
   //(2)その値がy秒間続いたら => (countval >= y)
-   if (countval >= 2){ //2秒以上数えられたら
+   if (countval >= 0.5){ //2秒以上数えられたら
       Serial.print("Heavy rain");  //シリアルモニタに出力
       digitalWrite(buzzerout, HIGH);  //ブザーがなる
       digitalWrite(ledout, HIGH);  // LEDがひかる
